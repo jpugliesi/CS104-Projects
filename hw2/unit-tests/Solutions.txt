@@ -1,0 +1,7 @@
+Correct Outputs:
+
+HW1Q6T1 - Maximum learning: 13.18 (Program should select CSCI104, CSCI103, CSCI280, and MATH225)
+HW1Q6T2 - Maximum learning: 25.878 (Program should select ANTH263, PHIL137, and CTIN488)
+HW1Q6T3 - Maximum learning: 0.00 (Program should select nothing)
+HW1Q6T4 - Maximum learning: 82.519 (Program should select CHEM102, CSCI201, MATH125, CSCI103, ENGR102, EE101, CSCI104, ANAT521, EDUC500, BISC104, EDUC140, NEUR440, and FREN120)
+HW1Q6T5 - Maximum learning: 10.4 (Program should select either CSCI104 and CSCI280 or CSCI103, ENGR102, and MATH225) EDUC500
