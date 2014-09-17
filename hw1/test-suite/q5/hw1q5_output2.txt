@@ -1,0 +1,13 @@
+Error - bucket 0 does not exist
+Error - bucket 0 does not exist
+Error - bucket 0 does not exist
+empty
+1 2 3
+Error - bucket 1 is not empty
+1 2 3
+empty
+empty
+1 2 3
+Error - bucket 2 is not empty
+1 2 3
+empty
