@@ -76,8 +76,8 @@ int main(int argc, char *argv[])
 	bool test;
 	for(int i = 0; i < newMapSize; i++){
 		test = false;
-		cout << newMap.get(people[i], test) < endl;
-		if(success == false){
+		cout << newMap.get(people[i], test) << endl;
+		if(!test){
 			cout << "There's something wrong with the get function, recheck your code!" << endl;
 			break;
 		}
