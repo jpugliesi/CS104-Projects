@@ -36,7 +36,7 @@ int main()
   setA.remove(2.0);
 
   cout << "After removing 3 elements from set A, sized 10, the set has size ";
-  cout << setA.size(); << endl;
+  cout << setA.size() << endl;
 
   for (double i = 0.0; i < 10.0; ++i) {
     cout << "Does set A contain " << i << "? " << setA.contains(i) << endl;
