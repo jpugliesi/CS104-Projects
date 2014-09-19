@@ -44,17 +44,6 @@ int main(int argc, char *argv[])
 	cout << "Alana's email should still be Alana@usc.edu. My output: " << newMap.get("Alana", success) << endl;
 	//if Alana's email wasn't Alana@usc.edu, then something is wrong with the add function
 
-	//try to get someone's email that isn't there
-	try{
-		success = false;
-		cout << newMap.get("Henry", success) << endl;
-		if(success == true){
-			cout << "Something is wrong with the get function" << endl;
-		}
-	}catch(exception &e){
-		cout << e.what() << endl;
-	}
-
 	//remove every third person from the map
 	for(int i = 0; i < 15; i+=3){
 		newMap.remove(people[i]);
