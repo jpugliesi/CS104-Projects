@@ -1,0 +1,13 @@
+BEGIN SOLUTION
+1. the empty string is correctly parenthesized
+2. any single character is correctly parenthesized
+3. if E is a correctly parenthesized expression, so is (E), the 
+concatenation of an opening parenthesis, E, and a closing parenthesis.
+4. if E is a correctly parenthesized expression, so is [E], the 
+concatenation of an opening bracket, E, and a closing bracket.
+5. if E1 and E2 are correctly parenthesized expressions, so it E1E2,
+the concatenation of the two expressions.
+
+Note that 1&2 could be combined into a single rule. Similarly, 3&4 can 
+be easily combined.
+END SOLUTION
