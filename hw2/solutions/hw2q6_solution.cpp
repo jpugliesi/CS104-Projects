@@ -19,11 +19,11 @@ double findMaxLearning(double work[], double learning[], int classCount, double 
 			if(learningSoFar > maxLearning)
 				maxLearning = learningSoFar;
 		
-			// Now recurse on all classes up to this class.
+			// Recurse on all classes up to this class.
 			findMaxLearning (work, learning, i, workSoFar, learningSoFar, maxWork, maxLearning); 
 		}
 
-		// Now undo the calculations so we can try again on a different class.
+		// Undo the calculations so we can try again on a different class.
 		workSoFar = workSoFar - work[i];	
 		learningSoFar = learningSoFar - learning[i];
 	}
