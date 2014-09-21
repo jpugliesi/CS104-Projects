@@ -12,6 +12,7 @@ double findMaxLearning(double work[], double learning[], int classCount, double 
 		learningSoFar = learningSoFar + learning[i];
 
 		// If adding that class doesn't exceed maximum work, then try adding it.
+		// Otherwise we'll stop exploring this combination branch.
 		if (workSoFar <= maxWork)			
 		{
 			// If adding this class increases the maximum learning, set it as the new maximum learning.
