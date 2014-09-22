@@ -62,7 +62,6 @@ int main (int numparams, char* params[])
 		{
 			istream iS (&fb);
 			iS >> n >> W; // reading basic problem parameters
-			cout << n << " " << W << "\n";
 
 			// allocating memory for classes and reading them
 			name = new string [n];
@@ -70,8 +69,6 @@ int main (int numparams, char* params[])
 			learning = new double [n];
 			for (int i = 0; i < n; i ++)
 				iS >> name[i] >> work[i] >> learning [i];
-			for (int i = 0; i < n; i ++)
-				cout << name[i] << " " << work[i] << " " << learning[i] << "\n";
 
 			/* this starts the recursion. We will first try class 0, and have a total
 			learning and work of 0 from classes numbered lower than 0 (because there are no such classes). */
