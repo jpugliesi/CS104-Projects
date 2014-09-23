@@ -31,7 +31,7 @@ double search (int currentClass, double currentWork, double currentLearning)
  * possible combinations of classes to take with indices currentClass ... (n-1).
  */
 {
-	if (currentWork < W) // so far, we haven't exceeded the work "budget"
+	if (currentWork <= W) // so far, we haven't exceeded the work "budget"
 	{
 		if (currentClass == n)
 			// we've made decisions for all classes already - this is the base case
