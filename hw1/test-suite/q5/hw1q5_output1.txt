@@ -1,6 +1,0 @@
-Error - bucket 1 is not empty
-6 2 2 3
-Error - bucket 0 does not exist
-5 7
-empty
-0

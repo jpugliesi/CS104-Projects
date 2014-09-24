@@ -1,6 +1,0 @@
-5
-there		are lots			of		tabs
-in				this			test	case
-				and		little		spaces
-test		test		test	test
-		test		test
