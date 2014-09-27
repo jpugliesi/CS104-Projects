@@ -1,0 +1,9 @@
+*.sln
+*.suo
+*.vcx*
+Debug
+Release
+*.stackdump
+*.sdf
+*.log
+*.dirstamp

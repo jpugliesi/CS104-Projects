@@ -1,0 +1,11 @@
+﻿Build started 9/26/2014 5:01:50 PM.
+     1>Project "E:\USC\CSCI104\homework-resources\hw3\solutions\TemplateDataStructures\TemplateDataStructures.vcxproj" on node 2 (build target(s)).
+     1>Build:
+         make
+         g++ -c src/MapTest.cpp -o obj/MapTest.o -std=c++11 -Wall -g -DDEBUG -Iheader/
+         g++ obj/MapTest.o obj/Map.o -o maptest -std=c++11 -Wall -g -DDEBUG
+     1>Done Building Project "E:\USC\CSCI104\homework-resources\hw3\solutions\TemplateDataStructures\TemplateDataStructures.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.54
