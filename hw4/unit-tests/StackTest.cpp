@@ -6,18 +6,18 @@ using namespace std;
 /* Test that an empty stack is truly empty */
 void testEmptyStack(IStack<int>* s) {
 	if (s->isEmpty()) {
-		cout << "Stack is empty and it should be, yay!" << endl;
+		cout << "Pass: Stack is empty and it should be, yay!" << endl;
 	}
 	else {
-		cout << "Failed. Stack was not empty and it should be :(" << endl;
+		cout << "Fail: Stack was not empty and it should be :(" << endl;
 	}
 
 	try {
 		s->top();
-		cout << "Top on an empty stack did not throw and it should have." << endl; //TODO: check with below
+		cout << "Fail: Top on an empty stack did not throw an ExmptyStackException, and it should have." << endl;
 	}
-	catch (const exception& e) { //TODO: check if should throw and if there's a specific type
-		cout << "Top threw and it should throw. Nice work!" << endl;
+	catch (const EmptyStackException& e) {
+		cout << "Pass: Top threw an EmptyStackException as it should. Nice work!" << endl;
 	}
 }
 
@@ -29,7 +29,7 @@ void testPushPop(IStack<int>* s, int n) {
 	cout << "Testing that pushed items actually go to the top, and the size is changing..." << endl;
 	for (int i = n-1; i >= 0; --i) {
 		if (s->isEmpty() || (s->top() != i)) {
-			cout << "Failed adding 5 items to the stack.. Top isn't what it should be." << endl;
+			cout << "Fail: Adding 5 items to the stack.. Top isn't what it should be." << endl;
 		}
 		s->pop();
 	}
