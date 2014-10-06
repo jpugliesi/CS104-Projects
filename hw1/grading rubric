@@ -1,0 +1,52 @@
+#CSCI 104 - HW01 Grading Rubric
+
+###Problem 1 (Course Policies, 15%)
+**3pts** for each part. Use the standard multiple choice rule:
+> + If you missed 1 on a problem of several possible answers, you got 50%
+> + If you missed more than 1 on a problem with multiple correct answers, you got 0
+> + If you missed the 1 right answer (if there's only 1 correct answer), you got 0
+
+Key:
+  + **Part (a)**: 1,3,5
+  + **Part (b)**: 2,3,4,5
+  + **Part (c)**: 3
+  + **Part (d)**: 2
+  + **Part (e)**: 3
+
+###Problem 2 (Git, 15%)
+**5 pts** for each part. These 5 points are distributed evenly amongst
+subquestions. Each subquestion were graded with all or nothing with
+some leeway for minor mistakes like putting `git -commit` rather than
+`git commit`. For those minor mistakes we deducted 1 point.
+
+Key:
+  + **Part (a)**: (1) and (3)
+  + **Part (b)**:
+    1. _(2.5 pts)_ `git add hw1q2b.cpp` 
+    1. _(2.5 pts)_ `git log -3` -- extra parameters like `-p` and `--format` were accepted as long as `-3` is there
+  + **Part (c)**:
+    - _(2.5 pts)_ An editor will open
+    - _(2.5 pts)_ To write commit message
+
+###Problem 4 (Strings and Streams, Dynamic Memory, 30%)
+Partial credit was allotted after examining the code.
+  + _(6 pts)_ Proper File I/O = 20%
+  + _(12 pts)_ Chunking into individual words = 40%
+  + _(3 pts)_ Outputting in reverse order = 10%
+  + _(9 pts)_ Using dynamic allocation (not allocating on stack or using STL) = 30%
+
+Also, memory allocation rules were applied from the general rubric. We ran your code through valgrind.
+
+###Problem 5 (Dynamic Memory, Strings, 40%)
+Any solution that stored the lists of numbers (buckets) in something that takes care of memory automatically (like vectors) was graded for at most at half the credit (if everything else is perfect).
+
+The use of `struct` for buckets is perfectly fine (though not required), and you were allowed to store in the `struc` things like an `int size`, or `bool isEmpty` in addition to the actual array. 
+
+  + _(4 pts) correct parsing of I/O and checks on input file = 10%
+  + _(4 pts) correct dynamic allocation of overall bucket array = 10%
+  + _(12 pts) correct dynamic allocation (and use) of buckets = 30%
+  + _(12 pts) correct deallocation of buckets, both upon EMPTY command and at the end of the program = 30%. (If deallocation at the end is missing, lose 6 pts. If deallocation at the end or in the middle could be deallocating NULL pointer, e.g., a loop deallocating __all__ buckets, lose 6 pts.)
+  + _(8 pts) correct answers/outputs to all commands.
+
+The genral rubric was also considered. 
+
