@@ -1,0 +1,77 @@
+#CSCI 104 - HW02 Grading Rubric
+
+
+
+###Problem 1 (Makefiles, 15%)
+Points were provided with the key below:
+  + (4 pts) **Part (a)**: 1
+  + (4 pts) **Part (b)**:
+    + make clean &#8594; `rm -f $(ODIR)/*.o *~ shape1 shape2 $(IDIR)/*~` &#8594; `rm -f $./*.o *~ shape1 shape2 ./*~`
+    + make:
+      + shape1.o &#8594; `$(CC) -c -o $@ $< $(CFLAGS)` &#8594; `g++ -c -o shape1.o shape1.cpp -I. -std=c++11 -ggdb`
+      + shape.o &#8594; `$(CC) -c -o $@ $< $(CFLAGS)` &#8594; `g++ -c -o shape.o shape.cpp -I. -std=c++11 -ggdb`
+      + shape1 &#8594; `$(CC) -o $@ $^ $(CFLAGS) $(LIBS)` &#8594; `g++ -o shape1 shape1.o shape.o -I. -std=c++11 -ggdb -lm`
+      + shape2.o &#8594; `$(CC) -c -o $@ $< $(CFLAGS)` &#8594; `g++ -c -o shape2.o shape2.cpp -I. -std=c++11 -ggdb`
+      + shape2 &#8594; `$(CC) -o $@ $^ $(CFLAGS) $(LIBS)` &#8594; `g++ -o shape2 shape2.o shape.o -I. -std=c++11 -ggdb -lm`
+  + (4 pts) **Part (c)**: A phony makefile rule indicates that the rule's action will not create a file with the rule name so make utility should not expect an output file.
+  + (3 pts) **Part (d)**: 2,4
+
+&sect; This problem is graded as all or nothing but partial credit was given for very small errors.
+
+Used standard multiple choice rule:
+> + If you missed 1 on a problem of several possible answers you got 50%
+> + If you missed more than 1 on a problem with multiple correct answers you got 0
+> + If you missed the 1 right answer (if there's only 1 correct answer) you ge=ot 0
+
+###Problem 2 (More git questions, 15%)
+
+
+Key:
+  + _(2 pts)_ **Part (a)**: _unmodified_
+  + _(2 pts)_ **Part (b)**: `README.md` &#10137; _modified_, `fun_problem.txt` &#10137; _untracked_
+  + _(2 pts)_ **Part (c)**: Both files are _staged_
+  + _(2 pts)_ **Part (d)**: Both files are _modified_
+ + _(2 pts)_ **Part (e)**: `README.md` &#10137; _staged_, `fun_problem.txt` &#10137; _unmodified_
+  + _(2.5 pts)_ **Part (f)**: `README.md` has two states: _staged_ and _modified_
+    - This is an all or nothing problem. The student must provide both states to get any points.
+  + _(2.5 pts)_ **Part (g)**:
+```
+>figure courtesy of the [Pro Git](http://git-scm.com/book) book by Scott Chacon
+Markdown is easy
+Markdown is too easy
+```
+
+###Problem 4 (Recursive Definitions, 20%)
+Correct Solution:
+  + the empty string is correctly parenthesized [2 points]
+  + any single letter is correctly parenthesized [2 points]
+  + if P is correctly parenthesized, so are (P) and [P] [8 points]
+  + if P1, P2 are correctly parenthesized, so is the concatenation P1P2 [8 points]
+
+If your solution contained any single rule that contains infinitely many cases (such as "Any string is correctly parenthesized"), that lost 5 points.
+
+If rules missed some cases, or allow certain strings, we took off points between 1-10 based on how severe it is.
+
+If the number of rules is excessively large (more than 8 rules), we took off 1-2 points for bad style (even if the ruels were correct). 
+
+###Problem 5 (Summing up numbers, 20%)
+First, we applied general rubric in terms of compilation, crashes, memory leaks, etc.
+Then, we gave appropriate partial credit if parts were implemented correctly:
+  + _(2 pts)_ Reading input correctly
+  + _(2 pts)_ Correct iterative implementation of sum
+  + _(7 pts)_ Correct and inserting into linked list:recursive implementation of sum
+  + _(5 pts)_ Correct application of timer and command line
+  + _(4 pts)_ Plausible answer on running times, and explanation for reasons
+
+
+###Problem 6 (Recursion and Backtracking, 30%)
+First, we applied general rubric in terms of compilation, crashes, memory leaks, etc.
+Then, we gave appropriate partial credit if parts were implemented correctly.  Greedy solutions could earn at most 5 points (the point of the problem was backtracking).
+  + _(3 pts)_ File I/O
+  + _(15 pts)_ General structure of recursion in Backtracking, with right loops going over right range (true, false; or 0, 1) and correct recursive calls.
+  + _(12 pts)_ Correct implementation of checking total work of selected classes, storing maximum total learning so far (in some form), and otherwise keeping track.
+
+Some Deduction Policies Used:
+  + _(-10 pts)_ Solution that runs for loop from 0 to 2^n-1 and uses the individual bits to read off solution.
+  + If the algorithm was wrong (e.g., greedy), large deduction. Wrong output should resulted in a minimum of 5 points deduction.
+  + If the solution is implemented so inefficiently that it doesn't even run fast enough for 25 classes (e.g., can only work up to n = 15), somewhere between 5-10 points deduction depending on severity.
