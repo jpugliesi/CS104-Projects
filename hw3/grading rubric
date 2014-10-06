@@ -1,0 +1,133 @@
+#CSCI 104 - HW03 Grading Rubric
+
+
+
+
+###Problem 1 (Debugging Using gdb, 15%)
+####gdb Debugging (9 pts)
+For the debugging parts, we deducted points if *gdb* syntaxes were wrong, you did not explain a *gdb* command, or *non-gdb* debugging methods were being used (e.g. *cout-ing*). Points were provided with the key below. Note that _Parts (d)_ and _(e)_ need not to be in order:
+
+  + (1.5 pts) **Part (a)**:
+    - `factorial.cpp:factorial()` replace `unsigned int i` with `int i`
+    - Add a `return` statement. Anything will do.
+    - [Optional] create a new `long int` variable and return that.
+    
+  + (1.5 pts) **Part (b)**:
+    - `break 17` -- 17 is not absolute. expect &plusmn;1 line.
+    - `break factorial`
+  
+  + (2 pts) **Part (c)**:
+    - The index for the for loop in `factorial()` was initialized to `0` making the result of the multiplication `0`
+    - The student should list a logical sequence of command showing:
+      * `r` or `run`
+      * `n`/`c` or `next`/`continue`
+      * `print i`
+      * `print num` or whatever variable is in the loop
+  
+  + (2 pts) **Part (d)**:
+    - We are using `num` to calculate the factorial which is always increasing due to the factorial calculation.
+    - The student should list a logical sequence of command showing:
+      * A new `break` at the for loop
+      * A sequence of `n`/`c` that shows they looped for at least on call to `factorial()`
+      * A number of `print i`
+      * A number of `print num` or whatever variable is in the loop
+      
+  + (2 pts) **Part (e)**:
+    - No. The for loop was performing an extra iteration causing the factorial to be miscalculated
+    - The student should list a logical sequence of command showing:
+      * A new `break` at the for loop
+      * A sequence of `n`/`c` that shows they looped for at least on call to `factorial()`
+      * A number of `print i`
+      * A number of `print num` or whatever variable is in the loop
+      
+
+
+####Fixed code (6 pts)
+We deducted points for the following after compiling and running your code:
+  + _(-2 pts)_ if `value` was declared as `int`, i.e. not a `long int`
+  + _(-2 pts)_ if `factorial()` was changed to return something other than `long int`
+  + _(-6 pts)_ if compiling with `g++ -Wall -g -o factorial factorial.cpp` return any *warning* or *error*.
+
+```c++
+
+	#include <iostream>
+	#define TEST_ARRAY_SIZE 4
+
+	long int factorial(int num);
+	long int factorial(int num) {
+		//define a long int to hold the factorial value. (deduct 50% for having it as int)
+		long int value = num;
+		/*
+		 * Fixes for loop:
+		 *   + remove unsigned
+		 *   + initialize i to be 1
+		 *   + replace <= with <
+		 *   + use value instead of num
+		 */
+		for(int i = 1; i < num; i++) {
+			value *= i;
+		}
+		//return the long int declared in the top of function
+		return value;
+	}
+
+	int main() {
+	int test[TEST_ARRAY_SIZE] = {1, 2, 5, 7};
+		for (unsigned int i = 0; i < TEST_ARRAY_SIZE; i++) {
+			std::cout << "Factorial of " << test[i] << " is " << factorial(test[i]) << std::endl;
+		}
+	}
+```
+
+###Problem 3 (Maps via Linked Lists, 40%)
+
+####Code Inspection (14 pts)
+Inspected according to general rubric.
+If you used the STL, you could get max 10 points for the whole problem.  If you used the STL map implementation, you got **zero** points for the whole problem.
+
+####Tests (26 pts)
+  + _(2 pts)_ Using a `<K,V>` pair template.
+  + _(2 pts)_ The template works for \<string, string\>.
+  + _(2 pts)_ The template works for \<int, string\>.
+  + _(2 pts)_ The template works for \<int, int\>.
+  + _(1 pts)_ Constructor
+  + _(1 pts)_ Destructor
+  + _(1 pts)_ `size()`
+  + _(3 pts)_ `add()`
+  + _(3 pts)_ `remove()`
+  + _(3 pts)_ `get()`
+  + _(6 pts)_ `merge()`
+
+###Problem 4 (Testing your Maps, 10%)
+Your implementation should work for the following:
+  + _(1 pts)_ QUIT
+  + _(2 pts)_ ADD [Name] [E-mail]
+  + _(2 pts)_ REMOVE [Name]
+  + _(2 pts)_ QUERY [Name]
+  + _(3 pts)_ LOAD [Filename]
+  
+###Problem 5 (Implementing Sets using Maps, 30%)
+
+####Code Inspection (10 pts)
+Gave points according to the genral rubric guidelines. If you did not use your Map implementation from problem 3, you could receive max 7 points for the whole problem.
+
+####Tests (20 pts)
+Test your implementation for the following:
+  + _(2 pts)_ Using a template for the item type.
+  + _(2 pts)_ The template works for type \<string\>.
+  + _(2 pts)_ The template works for type \<int\>.
+  + _(1 pts)_ Constructor
+  + _(1 pts)_ Destructor
+  + _(1 pts)_ `size()`
+  + _(2 pts)_ `add()`
+  + _(2 pts)_ `remove()`
+  + _(2 pts)_ `contains()`
+  + _(5 pts)_ `merge()`
+
+###Problem 6 (Testing your Sets, 5%)
+Your implementation should work for the following:
+  + _(1 pts)_ QUIT
+  + _(1 pts)_ ADD [Name] [E-mail]
+  + _(1 pts)_ REMOVE [Name]
+  + _(1 pts)_ CONTAINS [Name]
+  + _(1 pts)_ LOAD [Filename]
