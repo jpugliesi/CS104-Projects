@@ -21,8 +21,11 @@ ewewewewsn
 nnwwssee
 [Fail]
 
-nnwwsseewwnnwwss
+nnwwsseewwnneess
 [Pass]
+
+nnwwsseewwnnwwss
+[Fail]
 
 nnwwsseeeesswwnn
 [Fail]
